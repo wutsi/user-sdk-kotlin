@@ -11,7 +11,7 @@ public interface UserApi {
   @RequestLine("GET /v1/users/{id}")
   public fun `get`(@Param("id") id: Long): GetUserResponse
 
-  @RequestLine("GET /v1/users/{id}/followers")
+  @RequestLine("GET /v1/users/{id}/followers?limit={limit}&offset={offset}")
   public fun followers(
     @Param("id") id: Long,
     @Param("limit") limit: Int,
