@@ -12,7 +12,7 @@ public interface UserApi {
   public fun `get`(@Param("id") id: Long): GetUserResponse
 
   @RequestLine("GET /v1/users/{id}/followers")
-  public fun `get`(
+  public fun followers(
     @Param("id") id: Long,
     @Param("limit") limit: Int,
     @Param("offset") offset: Int
