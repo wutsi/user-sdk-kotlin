@@ -1,13 +1,15 @@
 package com.wutsi.user.dto
 
+import kotlin.Boolean
 import kotlin.Long
 import kotlin.String
 
 public data class User(
-  public val id: Long = 0,
+  public val id: Long = -1,
   public val name: String = "",
   public val email: String? = null,
   public val fullName: String = "",
-  public val pictureUrl: String = "",
-  public val language: String = ""
+  public val pictureUrl: String? = null,
+  public val language: String? = null,
+  public val testUser: Boolean = false
 )
