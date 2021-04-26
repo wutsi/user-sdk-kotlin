@@ -4,7 +4,7 @@ import kotlin.Boolean
 import kotlin.Long
 import kotlin.String
 
-public data class User(
+public data class UserSummary(
   public val id: Long = -1,
   public val siteId: Long = 1,
   public val name: String = "",
