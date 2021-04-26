@@ -1,5 +1,7 @@
 package com.wutsi.user.dto
 
+import kotlin.collections.List
+
 public data class SearchUserResponse(
-  public val user: UserSummary = UserSummary()
+  public val users: List<UserSummary> = emptyList()
 )
