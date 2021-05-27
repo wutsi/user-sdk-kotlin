@@ -12,5 +12,7 @@ public data class UserSummary(
   public val fullName: String = "",
   public val pictureUrl: String? = null,
   public val language: String? = null,
-  public val testUser: Boolean = false
+  public val testUser: Boolean = false,
+  public val followerCount: Long = 0,
+  public val subscriberCount: Long = 0
 )

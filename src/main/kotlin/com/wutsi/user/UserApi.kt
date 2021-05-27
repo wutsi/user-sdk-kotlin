@@ -1,6 +1,7 @@
 package com.wutsi.user
 
 import com.wutsi.user.dto.GetUserResponse
+import com.wutsi.user.dto.SaveWalletRequest
 import com.wutsi.user.dto.SearchFollowerResponse
 import com.wutsi.user.dto.SearchUserResponse
 import feign.Headers
@@ -19,9 +20,9 @@ public interface UserApi {
     @Param("offset") offset: Int = 0
   ): SearchUserResponse
 
-  @RequestLine("GET /v1/users/{id}")
+  @RequestLine("POST /v1/users/{id}/wallet")
   @Headers("Content-Type: application/json")
-  public fun `get`(@Param("id") id: Long): GetUserResponse
+  public fun wallet(@Param("id") id: Long, request: SaveWalletRequest): GetUserResponse
 
   @RequestLine("GET /v1/users/{id}/followers?follower-user-id={follower-user-id}&limit={limit}&offset={offset}")
   @Headers("Content-Type: application/json")
