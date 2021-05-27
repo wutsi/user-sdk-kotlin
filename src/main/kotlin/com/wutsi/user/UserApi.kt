@@ -14,7 +14,7 @@ import kotlin.Long
 public interface UserApi {
   @RequestLine("GET /v1/users?blog={blog}&limit={limit}&offset={offset}")
   @Headers("Content-Type: application/json")
-  public fun search(
+  public fun searchUsers(
     @Param("blog") blog: Boolean? = null,
     @Param("limit") limit: Int = 20,
     @Param("offset") offset: Int = 0
@@ -22,11 +22,11 @@ public interface UserApi {
 
   @RequestLine("POST /v1/users/{id}/wallet")
   @Headers("Content-Type: application/json")
-  public fun wallet(@Param("id") id: Long, request: SaveWalletRequest): GetUserResponse
+  public fun getWallet(@Param("id") id: Long, request: SaveWalletRequest): GetUserResponse
 
   @RequestLine("GET /v1/users/{id}/followers?follower-user-id={follower-user-id}&limit={limit}&offset={offset}")
   @Headers("Content-Type: application/json")
-  public fun followers(
+  public fun searchFollowers(
     @Param("id") id: Long,
     @Param("follower-user-id") followerUserId: Long? = null,
     @Param("limit") limit: Int = 20,
