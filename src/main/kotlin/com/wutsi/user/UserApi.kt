@@ -21,7 +21,7 @@ public interface UserApi {
     @Param("offset") offset: Int = 0
   ): SearchUserResponse
 
-  @RequestLine("POST /v1/users/{id}")
+  @RequestLine("GET /v1/users/{id}")
   @Headers("Content-Type: application/json")
   public fun getUser(@Param("id") id: Long): GetUserResponse
 
