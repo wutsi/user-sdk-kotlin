@@ -13,9 +13,10 @@ import kotlin.Int
 import kotlin.Long
 
 public interface UserApi {
-  @RequestLine("GET /v1/users?blog={blog}&limit={limit}&offset={offset}")
+  @RequestLine("GET /v1/users?site-id={site-id}&blog={blog}&limit={limit}&offset={offset}")
   @Headers("Content-Type: application/json")
   public fun searchUsers(
+    @Param("site-id") siteId: Long = 1,
     @Param("blog") blog: Boolean? = null,
     @Param("limit") limit: Int = 20,
     @Param("offset") offset: Int = 0
