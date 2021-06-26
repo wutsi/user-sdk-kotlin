@@ -6,7 +6,7 @@
 
   <artifactId>user-sdk-kotlin</artifactId>
   <groupId>com.wutsi.user</groupId>
-  <version>1.9.6</version>
+  <version>1.9.7-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <name>user-sdk-kotlin</name>
@@ -54,7 +54,7 @@
 
   <scm>
     <developerConnection>scm:git:https://github.com/wutsi/user-sdk-kotlin.git</developerConnection>
-    <tag>user-sdk-kotlin-1.9.6</tag>
+    <tag>HEAD</tag>
   </scm>
   <distributionManagement>
     <repository>
